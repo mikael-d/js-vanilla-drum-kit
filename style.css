@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+
+body {
+    background-image: url("https://www.kannabia.com/sites/default/files/styles/4xy/public/article/2352/nights-ein-festival-wo-das-nachtleben-thematisiert-wird-image-5269.jpg?itok=nbLG3Nr9");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.keys {
+    margin: 50% auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.key {
+    border: 3px solid black;
+    border-radius: 5%;
+    padding: 1em 0.5em;
+    text-align: center;
+    width: 5rem;
+    height: 5rem;
+    background: rgba(37, 37, 37, 0.548);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 0.5s;
+    
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color:#ffc600;
+    box-shadow: 0 0 10px #ffc600;
+}
+
+.key-board,.sound-description {
+    font-family: 'Russo One',
+    sans-serif;
+}
+
+.key-board {
+    color: whitesmoke;
+    font-size: 2rem;
+}
+
+.sound-description {
+    color: rgb(209, 209, 39);
+    text-transform: uppercase;
+    font-size: 1rem;
+}

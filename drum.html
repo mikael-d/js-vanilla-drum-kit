@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="keys">
+        <div data-key="81" class="key"><kbd class="key-board">Q</kbd><span class="sound-description">Cassette</span></div>
+        <div data-key="83" class="key"><kbd class="key-board">S</kbd><span class="sound-description">Message</span></div>
+        <div data-key="68" class="key"><kbd class="key-board">D</kbd><span class="sound-description">Door</span></div>
+        <div data-key="70" class="key"><kbd class="key-board">F</kbd><span class="sound-description">Micro-wave</span></div>
+        <div data-key="71" class="key"><kbd class="key-board">G</kbd><span class="sound-description">Whoosh</span></div>
+        <div data-key="72" class="key"><kbd class="key-board">H</kbd><span class="sound-description">Zapping</span></div>
+        <div data-key="74" class="key"><kbd class="key-board">J</kbd><span class="sound-description">SNCF</span></div>
+        <div data-key="75" class="key"><kbd class="key-board">K</kbd><span class="sound-description">Screw</span></div>
+        <div data-key="76" class="key"><kbd class="key-board">L</kbd><span class="sound-description">Laught</span></div>
+        <div data-key="77" class="key"><kbd class="key-board">M</kbd><span class="sound-description">OhOhOh</span></div>
+    </main>
+        <audio data-key="81" src="sound/COMAv_Cassette audio retour musique 13 (ID 2179)_LS.wav"></audio>
+        <audio data-key="83" src="sound/COMCell_Message envoye (ID 1313)_LS.wav"></audio>
+        <audio data-key="68" src="sound/DOORWood_Porte qui claque 4 (ID 1501)_LS.wav"></audio>
+        <audio data-key="70" src="sound/MACHAppl_Clochette de micro onde (ID 1631)_LS.wav"></audio>
+        <audio data-key="71" src="sound/SWSH_Whoosh 4 (ID 1796)_LS.wav"></audio>
+        <audio data-key="72" src="sound/TEST_Zapping (ID 2134)_LS.wav"></audio>
+        <audio data-key="74" src="sound/TMARK_Jingle sncf 2 (ID 0564)_LS.wav"></audio>
+        <audio data-key="75" src="sound/TOOLPowr_Visseuse 4 (ID 1575)_LS.wav"></audio>
+        <audio data-key="76" src="sound/VOXLaff_Rire horrible 2 (ID 2092)_LS.wav"></audio>
+        <audio data-key="77" src="sound/VOXMale_Pere noel oh oh oh 1 (ID 2074)_LS.wav"></audio>
+</body>
+<script>
+    window.addEventListener("keydown",(e) => { 
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+        const key = document.querySelector(`div[data-key="${e.keyCode}"]`)
+        key.classList.toggle("playing");
+        setTimeout(() => {key.classList.toggle("playing")},500)
+        
+        if (!audio) { return } ;
+        audio.currentTime = 0;
+        audio.play();
+    })
+</script>
+</html>
